@@ -3,12 +3,16 @@ html.no-js(lang="en")
 	include includes/head.pug
 	body
 		//- First Impression
-		section.hero.is-fullheight
+		section.hero.is-fullheight.parallax-window(
+		data-parallax="scroll",
+		data-image-src=picSrc || "https://placekitten.com/g/1920/1080",
+		data-speed=speed)
 			.hero-head
 				include includes/nav.pug
 			.hero-body
 				.container.has-text-centered
-					img(src="assets/img/IMG_2060.png" alt="")
+					h1.title.is-1 Educon
+					//- img(src="assets/img/IMG_2060.png" alt="")
 			.hero-foot
 
 		article.article
@@ -53,3 +57,7 @@ html.no-js(lang="en")
 				p The future of Hawaii lies on the education of our students. We envision every student in Hawaii to have equal opportunities that enables them to discover, empower, and succeed.
 		//- Footer
 		include includes/footer.pug
+		script.
+			//<![CDATA[
+			    document.write("<script async src='http://HOST:8001/browser-sync/browser-sync-client.js?v=2.18.13'><\/script>".replace("HOST", location.hostname));
+			//]]></script>

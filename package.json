@@ -20,7 +20,11 @@
     "grunt-nodemon": "^0.4.2",
     "grunt-sass": "^2.0.0"
   },
+  "engines": {
+      "node": "8.2.1"
+    },
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

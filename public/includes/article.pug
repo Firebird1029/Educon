@@ -2,14 +2,26 @@ mixin section(title)
 	section.section
 		.container.has-text-centered
 			.content
-				h1= title
+				h1.dynamicHeader= title
 				block
 
 mixin parallax(speed, picSrc)
 	section.hero.is-fullheight.parallax-window(
 		data-parallax="scroll",
-		data-image-src=picSrc || "https://placekitten.com/g/1920/1080",
+		data-image-src=picSrc,
 		data-speed=speed)
 		.hero-body
 			.container.is-fluid.has-text-centered
 				block
+
+mixin dynamicSection(identifier)
+	section.section
+		.container.has-text-centered
+			.content
+				h1.dynamicHeader(class="dynamicHeader-" + identifier)= title
+				p.dynamicContent(class="dynamicContent-" + identifier)
+				block
+
+mixin dynamicHeroBody(identifier)
+	h1.title.is-1.dynamicHeroBody(class="dynamicHeroBody-" + identifier)
+	block

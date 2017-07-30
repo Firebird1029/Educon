@@ -1,1 +1,7 @@
 extends template.pug
+
+block heroBody
+	+dynamicHeroBody("sponsors")
+
+block content
+	+dynamicSection("sponsors")

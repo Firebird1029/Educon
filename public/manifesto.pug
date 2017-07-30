@@ -1,7 +1,7 @@
 extends template.pug
 
 block heroBody
-	img(src="assets/img/kitty.jpeg", alt="")
+	+dynamicHeroBody("manifesto")
 
 block content
-	p hi
+	+dynamicSection("manifesto")
