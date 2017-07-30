@@ -5,53 +5,71 @@ html.no-js(lang="en")
 		//- First Impression
 		section.hero.is-fullheight.parallax-window(
 		data-parallax="scroll",
-		data-image-src=picSrc || "https://placekitten.com/g/1920/1080",
+		data-image-src="assets/img/1.png",
 		data-speed=speed)
 			.hero-head
 				include includes/nav.pug
 			.hero-body
 				.container.has-text-centered
-					h1.title.is-1 Educon
+					h1.title.is-1(style="color: white;font-weight: 800;") &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Educon
 					//- img(src="assets/img/IMG_2060.png" alt="")
 			.hero-foot
 
 		article.article
 			include includes/article.pug
-			//- First Comic
-			+parallax(0.5)
-				img(src="assets/img/IMG_2060.png", alt="")
 
-						//- <img src="https://dummyimage.com/1920x1080/000/fff.png" alt="">
 			//- Problem Space
-			section.section
+			section.section(style="background-color: #b8f0b8;")
 				.container.has-text-centered
 					.content
-						h1 The Problem
+						h1 What We Do
 						p.
-							Hawaii’s educational system is home to a multitude of schools in a multitude of locations. While students at schools in larger towns or cities can take advantage of many local businesses and community spaces, schools in more remote or economically disadvantaged areas cannot. This deprives students of opportunities to explore new approaches to education (such as makerspaces) that would allow them to engage with types of work they might find fulfilling. Additionally, traditional educational services (such as writing or math tutors) might not be readily available in their community due to scarcity of human resources. A mobile educational platform that could visit schools and provide these services would be invaluable to these students’ educations and futures.
+							Educon is a non-profit connects student and mentors in a way that is welcoming and fun. 
+
+			//- First Comic
+			+parallax(0.5)
+				img(src="assets/img/2.png", alt="")
+
+						//- <img src="https://dummyimage.com/1920x1080/000/fff.png" alt="">
 			//- Stats
-			section.section
+			section.section(style="background-color: #b8f0b8;")
 				.columns.has-text-centered
 					.column
-						i.fa.fa-fw.fa-home.fa-5x
-						p.content.
-							Fact: In Nanakuli-Waianae Complex Area, seven out of 10 students are disadvantaged, up to two-thirds are of native Hawaiian descent, and many are homeless.
-					.column
-						i.fa.fa-fw.fa-home.fa-5x
-						p.content.
-							Mentoring relationships provide valuable support to young people. Mentors can help guide youth through the sometimes awkward developmental stages that accompany the transition into adulthood. Mentoring can offer not only academic and career guidance, but also role models for leadership, interpersonal and problem-solving skills.
-					.column
-						i.fa.fa-fw.fa-home.fa-5x
 						p.content
-							span
-								| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non itaque maxime ea recusandae enim ullam excepturi ipsa eligendi, amet quis perferendis, mollitia voluptate facilis molestiae architecto neque soluta illo repudiandae.
+							strong Discover.
+							p Discover the opportunities around you and story paths you can pursue.
+					.column
+						p.content
+							strong Empower.
+							p Become Empowered to chase dreams and reach for big goals.
+					.column
+						p.content
+							strong Succeed.
+							p Finally, get results and Succeed.
+					//- .column
+					//- 	//- i.fa.fa-fw.fa-home.fa-5x
+					//- 	p.content
+					//- 		strong Fact: 
+					//- 		span In Nanakuli-Waianae Complex Area, seven out of 10 students are disadvantaged, up to two-thirds are of native Hawaiian descent, and many are homeless.
+					//- .column
+					//- 	//- i.fa.fa-fw.fa-home.fa-5x
+					//- 	p.content
+					//- 		strong Fact: 
+					//- 		span Mentoring relationships provide valuable support to young people. Mentors can help guide youth through the sometimes awkward developmental stages that accompany the transition into adulthood. Mentoring can offer not only academic and career guidance, but also role models for leadership, interpersonal and problem-solving skills.
+					//- //- .column
+					//- //- 	i.fa.fa-fw.fa-home.fa-5x
+					//- //- 	p.content
+					//- //- 		span
+					//- //- 			| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non itaque maxime ea recusandae enim ullam excepturi ipsa eligendi, amet quis perferendis, mollitia voluptate facilis molestiae architecto neque soluta illo repudiandae.
+
+			//- Second Comic
+			+parallax(0.2)
+				img(src="assets/img/chart.png", alt="")
+
 			//- Mission
 			+section("The Mission")
 				p To establish a connected community that will provide a network of resources and mentorship for students in remote or economically disadvantaged areas.
 
-			//- Second Comic
-			+parallax(0.2)
-				img(src="https://placekitten.com/g/600/400", alt="")
 			//- Vision
 			+section("The Vision")
 				p The future of Hawaii lies on the education of our students. We envision every student in Hawaii to have equal opportunities that enables them to discover, empower, and succeed.
