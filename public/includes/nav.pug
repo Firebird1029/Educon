@@ -9,10 +9,10 @@ nav.navbar(style="width: 100%; position: fixed; z-index: 100; box-shadow: 0px 3p
 		a.navbar-item(href="/index.html")
 			img(src="assets/img/finallogo.png")
 			span Educon
-		.navbar-burger.burger
+		.navbar-burger(data-target="navMenu")
 			- for (var x = 0; x < 3; x++)
 				span
-	.navbar-menu
+	#navMenu.navbar-menu
 		.navbar-start
 			.navbar-item &nbsp;
 			+dropdown("Who We Are")
@@ -25,6 +25,7 @@ nav.navbar(style="width: 100%; position: fixed; z-index: 100; box-shadow: 0px 3p
 				a.navbar-item(href="school-partners.html") School Partners
 				a.navbar-item(href="supporters.html") Supporters
 			+dropdown("Get Involved")
+				a.navbar-item(href="contact-us.html") Contact Us
 				a.navbar-item(href="donate.html") Donate
 				a.navbar-item(href="join-us.html") Join Us
 			a.navbar-item(href="stories.html") Stories
