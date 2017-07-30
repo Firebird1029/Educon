@@ -4,7 +4,7 @@ var debug = false;
 // Load Node Modules & Custom Modules
 var express = require("express"),
 	app = express(),
-	server = app.listen(process.argv[2] || 8000, function expressServerListening () {
+	server = app.listen(process.env.PORT || (process.argv[2] || 8000), function expressServerListening () {
 		console.log(server.address());
 	}),
 	io = require("socket.io"),
