@@ -1,0 +1,24 @@
+# env:
+#   browser: true
+#   node: true
+extends: 'eslint:recommended'
+rules:
+  no-prototype-builtins:
+    - error
+  no-unsafe-negation:
+    - error
+  valid-jsdoc:
+    - error
+    # More, please
+  indent:
+    - error
+    - tab
+  linebreak-style:
+    - error
+    - unix
+  quotes:
+    - error
+    - double
+  semi:
+    - error
+    - always

@@ -1,0 +1,17 @@
+doctype html
+html.no-js(lang="en")
+	include includes/head.pug
+	body
+		section.hero.is-fullheight
+			.hero-head
+				include includes/nav.pug
+			.hero-body: .container.has-text-centered
+				block heroBody
+			.hero-foot
+				block heroFoot
+
+		article.article
+			include includes/article.pug
+			block content
+		//- Footer
+		include includes/footer.pug

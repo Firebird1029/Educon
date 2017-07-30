@@ -1,0 +1,37 @@
+mixin dropdown(link)
+	.navbar-item.has-dropdown.is-hoverable
+		a.navbar-link= link
+		.navbar-dropdown
+			block
+
+nav.navbar(style="width: 100%; position: fixed; z-index: 100; box-shadow: 0px 3px 6px #888888;")
+	.navbar-brand
+		a.navbar-item(href="/index.html")
+			img(src="assets/img/finallogo.png")
+			span Educon
+		.navbar-burger.burger
+			- for (var x = 0; x < 3; x++)
+				span
+	.navbar-menu
+		.navbar-start
+			.navbar-item &nbsp;
+			+dropdown("Who We Are")
+				//- hr.navbar-divider
+				a.navbar-item(href="manifesto.html") Manifesto
+				a.navbar-item(href="our-team.html") Our Team
+				a.navbar-item(href="our-model.html") Our Model
+				a.navbar-item(href="sponsors.html") Sponsors
+			+dropdown("Partners")
+				a.navbar-item(href="school-partners.html") School Partners
+				a.navbar-item(href="supporters.html") Supporters
+			+dropdown("Get Involved")
+				a.navbar-item(href="donate.html") Donate
+				a.navbar-item(href="join-us.html") Join Us
+			a.navbar-item(href="stories.html") Stories
+		.navbar-end
+			.navbar-item.is-paddingless
+				a.button.is-info(href="interface.html")
+					span Join Now
+			.navbar-item
+				a.button.is-danger(href="donate.html")
+					span Donate

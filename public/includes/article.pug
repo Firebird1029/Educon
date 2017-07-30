@@ -1,0 +1,15 @@
+mixin section(title)
+	section.section
+		.container.has-text-centered
+			.content
+				h1= title
+				block
+
+mixin parallax(speed, picSrc)
+	section.hero.is-fullheight.parallax-window(
+		data-parallax="scroll",
+		data-image-src=picSrc || "https://placekitten.com/g/1920/1080",
+		data-speed=speed)
+		.hero-body
+			.container.is-fluid.has-text-centered
+				block
