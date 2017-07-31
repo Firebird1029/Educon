@@ -6,3 +6,19 @@ block heroBody
 block content
 	+dynamicSection("contactus")
 		p Coming soon!
+		form#contactUsForm
+			.field
+				label.label First Name*
+				.control
+					input.input(type="text")
+				label.label Second Name*
+				.control
+					input.input(type="text")
+			.field
+				label.label Email*
+				.control
+					input.input(type="text")
+			.field
+				label.label Phone Number
+				.control
+					input.input(type="text")
